@@ -30,16 +30,38 @@ gives each concern its own isolated context, its own minimal tool access, and
 its own model tier (cheap by default, escalated only where a decision is
 expensive or hard to reverse).
 
+Each specialist is written to be a genuine expert in its domain, not a
+compliant order-taker: every agent carries a "domain mastery" section (real
+heuristics and failure modes, not generic advice) and a shared **advocate,
+don't just comply** principle — it will push back, with concrete reasoning, on
+a request that's technically doable but suboptimal or actively harmful, and
+hold the line on a short list of non-negotiables (security, data integrity,
+whether the MVP can test its hypothesis at all) unless given a real
+justification to override them.
+
 ## How it works
 
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the full pattern:
 the orchestrator/specialist split, the delegation flow, the model selection
-heuristic, and how the orchestrator maintains its own roster over time.
+heuristic, the advocate-don't-comply principle, and how the orchestrator
+maintains its own roster over time.
 
 ## Status
 
-Architecture documented, 8 generalized specialist agents included: `orchestrator`,
-`product`, `design`, `mobile`, `backend`, `frontend-web`, `devops`, `qa`.
+Architecture documented, 10 specialist agents included:
+
+| Agent | Role |
+|---|---|
+| `orchestrator` | Discovery, scoping, delegation, roster maintenance |
+| `product` | Hypothesis validation, MVP scope, success criteria |
+| `design` | UX flows, wireframes, visual identity |
+| `mobile` | Mobile implementation |
+| `frontend-web` | Web implementation |
+| `backend` | Data/infrastructure architecture |
+| `devops` | CI/CD, deploy, environments |
+| `qa` | Test plan and minimum viable coverage |
+| `security` | Independent security review before launch |
+| `analytics` | Turning success criteria into real instrumentation |
 
 ## License
 

@@ -36,8 +36,8 @@ involve, delegates to them, and synthesizes their output back to the user.
 ### Specialists
 
 Each specialist is a separate subagent file (for example: `product`, `design`,
-`mobile`, `backend`, `frontend-web`, `devops`, `qa` — the roster is a starting
-point, not a fixed list) with:
+`mobile`, `backend`, `frontend-web`, `devops`, `qa`, `security`, `analytics` —
+the roster is a starting point, not a fixed list) with:
 
 - a `name` and a `description` containing a clear trigger — the phrases that
   should activate it;
@@ -71,6 +71,38 @@ explicitly in the delegation call; nothing is implicit.
   owns data/infrastructure architecture.
 - This keeps cost proportional to the blast radius of the decision being made,
   rather than a blanket "always use the best model" policy.
+
+## Advocate, don't just comply
+
+Every specialist — and the orchestrator itself — is expected to bring and use
+real domain judgment, not just execute whatever is asked for literally. Being
+"a master of the craft" means the same thing here it means for a senior human
+hire: understanding the actual problem behind the request, and saying so when
+the requested path is technically doable but not the best available option, or
+is actively harmful to the project's cost, security, maintainability, or the
+business hypothesis being tested.
+
+The behavior has three parts:
+
+1. **Object once, with reasoning.** State the concern and the better
+   alternative in the same breath — backed by a concrete failure mode ("this
+   breaks under X", "this leaks Y"), never a vague appeal to "best practices."
+2. **Yield when given a real justification.** A reason tied to the user's
+   actual constraints (timeline, budget, a requirement the agent didn't know
+   about, a risk being consciously accepted) is enough to proceed. The agent's
+   job is to make sure the trade-off was actually seen, not to keep
+   re-litigating a decision already made with full information.
+3. **Never yield silently on non-negotiables.** Each specialist below defines
+   its own short list of things that aren't preference trade-offs — mostly
+   basic security, data integrity, and anything that would make the MVP unable
+   to actually test its hypothesis. For these, push back harder and require an
+   explicit, affirmative override before proceeding; one mention followed by
+   silent compliance is not enough.
+
+This applies to the human user, and equally to accepting another specialist's
+handoff uncritically — e.g. `mobile` should flag it if the `design` handoff
+specifies a flow that isn't buildable within the agreed constraints, instead of
+just implementing it as given.
 
 ## Self-maintaining roster
 
