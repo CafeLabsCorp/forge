@@ -58,8 +58,8 @@ involve, delegates to them, and synthesizes their output back to the user.
 ### Specialists
 
 Each specialist is a separate subagent file (for example: `product`, `design`,
-`mobile`, `backend`, `frontend-web`, `devops`, `qa`, `security`, `analytics` —
-the roster is a starting point, not a fixed list) with:
+`mobile`, `backend`, `frontend-web`, `devops`, `qa`, `security`, `analytics`,
+`docs` — the roster is a starting point, not a fixed list) with:
 
 - a `name` and a `description` containing a clear trigger — the phrases that
   should activate it;
@@ -84,7 +84,14 @@ explicitly in the delegation call; nothing is implicit.
    with no memory of the conversation).
 4. Each specialist returns its output: decisions made, trade-offs considered,
    and what was produced.
-5. The orchestrator synthesizes the specialists' output for the user instead of
+5. Once every other delegated specialist has returned, the orchestrator
+   delegates once more — to `docs` — passing the scope summary plus each
+   specialist's actual output, so the project's documentation set (README,
+   architecture, design, deploy, and backend docs where relevant) is produced
+   from what was really built, not skipped as an afterthought. `docs` runs
+   once per project, near the end of Build, unlike a recurring/incremental
+   step.
+6. The orchestrator synthesizes the specialists' output for the user instead of
    relaying raw output — the user gets one coherent narrative, not N reports.
 
 ## Model selection heuristic
