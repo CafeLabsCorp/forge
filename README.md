@@ -112,7 +112,7 @@ maintains its own roster over time.
 
 ## Status
 
-Architecture documented, 10 specialist agents included:
+Architecture documented, 11 specialist agents included:
 
 | Agent | Role |
 |---|---|
@@ -126,6 +126,7 @@ Architecture documented, 10 specialist agents included:
 | `qa` | Test plan and minimum viable coverage |
 | `security` | Independent security review before launch |
 | `analytics` | Turning success criteria into real instrumentation |
+| `docs` | Tool-agnostic documentation (README, architecture, design, deploy) |
 
 ## License
 
