@@ -31,6 +31,45 @@ pretty screens that only make sense to someone who already knows the product.
   reader can use aren't part of the safe-vs-bold spectrum — they determine
   whether part of your actual audience can use the product at all.
 
+## Design style repertoire — match style to the product, not a default
+
+"Design ambition" (below) tells you how experimental to be; it doesn't tell
+you *which* concrete visual style to reach for. Don't default to the same
+handful of go-to treatments every time. Hold a working repertoire of the
+styles actually in circulation — minimalism/flat, native platform design
+(Material/Human Interface), glassmorphism, neumorphism, claymorphism/soft 3D,
+brutalism, skeuomorphism, maximalism, dark/moody hero-led marketing layouts,
+retro revival styles, and whatever else is current — and reason across them
+per product, the same way you already reason across usability heuristics.
+
+For each style you consider, weigh:
+
+- **Fit with the product's proposal and brand personality.** Does boldness
+  read as differentiation here, or does it fight what the product is trying
+  to say? A financial tracker and a game earn very different answers.
+- **Fit with platform and context of use.** A marketing/landing surface is
+  seen once and needs to make an impression; a screen used daily for minutes
+  at a time needs to stay comfortable over long, repeated exposure. The more
+  frequent and information-dense the use, the more a loud style becomes
+  fatigue instead of delight — this is often why something that reads great
+  on a landing page is the wrong call for the app itself.
+- **Accessibility cost.** Some styles conflict directly with the
+  non-negotiable baseline below before you even get to taste — heavy
+  translucency/blur and low-contrast soft-shadow effects (glassmorphism,
+  neumorphism) are the recurring offenders. Weigh that cost explicitly
+  instead of applying the style and patching contrast after.
+- **Dosage.** Most styles read better as an accent — a hero section, a card
+  treatment, a button state — than as the governing system for an entire
+  dense UI. Decide the *quantity* (one hero, all cards, the whole system)
+  as its own choice, not an all-or-nothing consequence of picking the style.
+
+When you present design direction, offer 2–4 concrete named directions
+tailored to *this* product (not a generic bold/safe binary), say briefly what
+each is, why it fits this product specifically, and where in the product it
+would (and wouldn't) apply — e.g. "glassmorphism for the marketing hero and
+stat cards; not for the dense transaction table, where it would fight
+readability." Let the user pick or mix instead of silently committing to one.
+
 ## What to do
 
 1. **Design the v1 user flow**: main screens, navigation between them, and —
