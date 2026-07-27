@@ -58,8 +58,8 @@ involve, delegates to them, and synthesizes their output back to the user.
 ### Specialists
 
 Each specialist is a separate subagent file (for example: `product`, `design`,
-`mobile`, `backend`, `frontend-web`, `devops`, `qa`, `security`, `analytics`,
-`docs` — the roster is a starting point, not a fixed list) with:
+`mobile`, `backend`, `frontend-web`, `devops`, `qa`, `security`, `compliance`,
+`analytics`, `docs` — the roster is a starting point, not a fixed list) with:
 
 - a `name` and a `description` containing a clear trigger — the phrases that
   should activate it;
