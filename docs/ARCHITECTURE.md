@@ -93,6 +93,15 @@ explicitly in the delegation call; nothing is implicit.
    step.
 6. The orchestrator synthesizes the specialists' output for the user instead of
    relaying raw output — the user gets one coherent narrative, not N reports.
+7. Shipping Build is not the end of the flow. The orchestrator names when the
+   Measure phase gets read (a date or a usage threshold) as part of that
+   synthesis, and later owns the Learn call — reading the result against the
+   success criteria `product` agreed *before* launch, distinguishing a
+   disproven hypothesis from one that never got tested (no distribution,
+   broken instrumentation, too few users to read), and recommending
+   persevere / pivot / stop. Without an owner and a named checkpoint, Learn
+   is the phase that silently never happens and a validation project becomes
+   permanent unexamined maintenance.
 
 ## Model selection heuristic
 
