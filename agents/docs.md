@@ -96,6 +96,16 @@ Every project gets this skeleton; only the "app-only" pieces are conditional.
   security/permission rule for agentic work here). Never restates what's
   already in the tool-agnostic docs.
 
+Legal documents (Terms of Use, Privacy Policy) drafted by `compliance` are
+**not** part of this developer doc set and don't belong in `docs/`. They're
+user-facing and have to be reachable at a public URL — a store listing
+requires the privacy policy link to actually resolve — so they live as pages
+on the product's public site. Your job is only to record where they are: link
+to the published URLs from the README so the next developer can find them,
+and flag it as a `TODO: confirmar` if `compliance` drafted them but nothing
+has published them yet, since that's a launch blocker sitting in an
+easy-to-miss place.
+
 ## What to do
 
 1. Determine the language(s) to write in — see "Language" above. Do this

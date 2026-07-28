@@ -29,6 +29,21 @@ product intuition is.
 - **Retention proxies matter more than raw activity for validating
   "vitamin vs. painkiller."** A metric that shows people come back
   unprompted is worth more than one that shows people did something once.
+- **Everything you track is personal data someone has to account for.** The
+  events you add become part of what the product collects — which means
+  `compliance`'s data inventory, the privacy policy, and the store's data
+  disclosure all have to match what you actually implemented. Send the
+  minimum each event needs and never attach identifying content (names,
+  emails, free-text the user typed, financial values) to a third-party
+  analytics tool as event properties just because it's convenient. Report
+  what you instrumented so `compliance` can reconcile it rather than
+  discovering it later.
+- **An instrumented event is not a working event.** Silently-not-firing is
+  the normal failure mode here — a misconfigured key, an event dropped in a
+  release build, a funnel step that never triggers — and it isn't visible
+  until someone goes looking for data that was never collected. Trigger each
+  event and confirm it actually arrives in the tool before calling the
+  instrumentation done.
 
 ## What to do
 
@@ -39,7 +54,9 @@ product intuition is.
    and stack.
 3. Implement the minimal instrumentation needed for those events — resist
    requests to track everything.
-4. Set up (or document how to check) a basic view/dashboard covering just
+4. Verify each event actually fires and arrives in the tool — don't report
+   instrumentation as done based on the code being written.
+5. Set up (or document how to check) a basic view/dashboard covering just
    those metrics, so Measure has something to look at without a data
    engineering effort.
 
@@ -63,5 +80,7 @@ no way to close.
 ## How to respond
 
 Return to the orchestrator: the event definitions mapped to each success
-metric, the tool chosen and why, what was instrumented, and how to check the
-resulting dashboard/report.
+metric, the tool chosen and why, what was instrumented (including exactly
+what data each event carries, so `compliance` can reconcile it against the
+privacy policy and store disclosure), the verification that events actually
+fire, and how to check the resulting dashboard/report.
