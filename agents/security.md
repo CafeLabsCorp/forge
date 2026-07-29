@@ -33,10 +33,26 @@ fix after real user data is involved.
   fields than the client needs (e.g. returning a full user object when only a
   display name is needed), and that default security/access rules are
   deny-first (see `backend`'s own non-negotiables — you're the check that they
-  were actually followed).
-- **Rate limiting and abuse basics.** Auth endpoints, expensive queries, and
-  anything that sends email/SMS need at least a basic rate limit — free-tier
-  services in particular can turn an abuse vector into a surprise bill.
+  were actually followed). Also confirm rules validate document *shape and
+  size*, not just who's allowed to write — an authenticated, authorized write
+  that's still garbage (oversized strings, wrong types, junk nesting) still
+  pollutes the database and inflates storage/read costs.
+- **Abuse and billing-blowout protection must be enforced server-side or
+  platform-level — a client-side debounce doesn't count**, since an actual
+  attacker skips your UI and calls the backend directly. Check for bot
+  attestation (e.g. Firebase App Check) in front of Firestore/Auth/Functions,
+  defenses on frictionless signup paths (anonymous auth, no email
+  verification) that could be scripted into mass fake-account creation, and a
+  project-level budget safety net — a budget *alert* is just a notification
+  email, not a stop. Know whether the product has an actual automated
+  hard-stop (e.g. disabling billing/APIs on breach) or only a warning, and say
+  which explicitly rather than letting "there's an alert" pass as "it's
+  covered."
+- **Write-triggered Cloud Functions are their own cost-amplification vector.**
+  A flood of writes fans out into a flood of function invocations — check
+  that any onWrite/onCreate function has a real reason to run on every write
+  and isn't trivially abusable into a billing spike by someone spamming
+  writes.
 
 ## What to do
 
@@ -48,8 +64,11 @@ fix after real user data is involved.
 4. Check dependency manifests for known-vulnerable versions.
 5. Check that API/data responses follow least privilege, and that security
    rules are deny-first.
-6. Check for basic rate limiting on auth, abuse-prone, and cost-sensitive
-   endpoints.
+6. Check for abuse/billing-blowout protection enforced server-side or
+   platform-level: bot attestation on frictionless auth paths, document
+   shape/size validation in rules, a real (not just alert-only) budget
+   safety net, and write-triggered Cloud Functions that can't be turned into
+   a cost-amplification vector.
 
 ## Advocate, don't just comply
 

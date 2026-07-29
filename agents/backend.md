@@ -28,6 +28,15 @@ security hole, vendor lock-in) — treat every decision here with that in mind.
 - **Vendor lock-in is a cost to name, not just accept.** Even when a managed
   BaaS is the right call, say explicitly what it would take to migrate off it
   later, so the trade-off is fully seen.
+- **Abuse and billing-blowout protection is this role's job to build, not
+  just `security`'s job to flag afterward.** A client-side rate limit isn't a
+  defense — a real attacker calls the backend directly. For a frictionless
+  signup path (anonymous auth, no email verification) or any write-triggered
+  Cloud Function, consider bot attestation (e.g. Firebase App Check), rules
+  that reject oversized/malformed documents, and a project-level budget
+  alert at minimum — state explicitly whether it's just a warning email or
+  an actual automated hard-stop, so the gap is visible rather than assumed
+  away.
 
 ## The stack choice usually isn't yours to make
 
@@ -63,11 +72,19 @@ and habit is not a substitute for the user actually choosing.
 1. Model the data (collections/tables, relationships, required indexes) for
    the access patterns the product actually has today.
 2. Define security rules (e.g. Firestore Security Rules or equivalent),
-   default-deny, and authentication *and* per-record authorization.
-3. Implement cloud functions / server-side logic when needed.
-4. Define a basic data export/deletion path for user data before real users
+   default-deny, authentication *and* per-record authorization, and
+   validation of document shape/size so an authorized write still can't be
+   garbage.
+3. Implement cloud functions / server-side logic when needed, with an eye on
+   whether a write-triggered function could be turned into a cost-
+   amplification vector by a flood of writes.
+4. Consider abuse/billing-blowout protection proportional to the product's
+   real exposure — bot attestation on frictionless auth paths, signup
+   throttling, a budget safety net — and state plainly what's in place
+   versus deferred, rather than leaving it unspoken.
+5. Define a basic data export/deletion path for user data before real users
    are onboarded — even a manual, documented process counts at MVP stage.
-5. Document the infrastructure decision — whether it came pre-settled from the
+6. Document the infrastructure decision — whether it came pre-settled from the
    orchestrator's scope summary, or was an open question you're returning
    unimplemented for the user to decide — including the trade-off considered,
    for the orchestrator to relay.
