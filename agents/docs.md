@@ -88,6 +88,15 @@ Every project gets this skeleton; only the "app-only" pieces are conditional.
   it at whatever depth the project actually has — a few paragraphs for a
   static landing (routes, components, any client-side interactive demo and its
   state logic), a full breakdown for an app with real architecture.
+  Include **one representative operation traced end to end** — a real one the
+  product actually does, followed from the user's tap or request through each
+  layer it crosses to the data being stored and the UI updating, naming the
+  actual files/functions at each hop. A list of layers tells a newcomer what
+  exists; one trace tells them how the pieces connect, which is what they need
+  before changing anything. Pick the path that exercises the most of the
+  system, and if a couple of flows work in genuinely different ways (a write
+  versus a realtime read, say), trace one of each rather than pretending one
+  pattern covers everything.
 - **`docs/DESIGN.md`** (always, once the project has a named visual identity)
   — design tokens: color palette, typography, spacing, and the identity's name
   if the product has one (Café Labs products name theirs, e.g. "Envelope
@@ -97,20 +106,54 @@ Every project gets this skeleton; only the "app-only" pieces are conditional.
   — sourced from what `devops` actually set up, not a generic template.
 - **`docs/BACKEND.md`** (app-only — skip for static landings with no backend
   of their own) — data model, security rules, backend-specific decisions —
-  sourced from what `backend` actually decided and implemented. Include the
-  **integration surface the client actually talks to**, in whatever form this
-  stack expresses it: REST/GraphQL endpoints with their methods, payloads,
-  auth requirements and error cases; or, for a BaaS, the collection/document
-  paths, document shapes, and callable/triggered function names with their
-  arguments and return shapes. This is the part a new developer cannot infer
-  from the data model alone and would otherwise reconstruct by reading the
-  client code — and it's also the first thing to go stale, so derive it from
-  the code rather than from any specialist's summary.
+  sourced from what `backend` actually decided and implemented. It also holds
+  the **integration surface** (see below).
 - **`CLAUDE.md`** (always) — thin: 2-3 lines pointing to `README.md` and the
   relevant `docs/*.md` files, plus only what's genuinely AI-specific to this
   repo (an environment quirk that trips up an agent, a commit convention, a
   security/permission rule for agentic work here). Never restates what's
   already in the tool-agnostic docs.
+
+### The integration surface — document it in the shape the stack actually has
+
+Every project has a boundary where the client asks for or changes data. A new
+developer has to understand that boundary to change anything, and it's the one
+part they can't infer from the data model — without it they reconstruct it by
+reading client code, which is exactly the cold-start cost this doc set exists
+to remove.
+
+That boundary looks completely different per stack, and **the documentation
+has to take the shape the stack actually has** — not a REST-shaped endpoint
+table applied to something that isn't REST, and not skipped because the
+project has no "endpoints" in the classic sense. Depending on the project it
+might be HTTP endpoints the client fetches, a GraphQL schema, collection and
+document paths accessed through a BaaS SDK, callable or trigger-based cloud
+functions, realtime subscriptions/WebSocket channels and their message types,
+server actions or RPC methods, queries against a database through an ORM,
+events on a queue, or a third-party API the product consumes. Most real
+projects have more than one of these at once — document each one that exists.
+
+Whatever the shape, the questions a reader needs answered are the same, and
+those are what you're actually writing down:
+
+- **How is it addressed** — the URL, path, channel, function name, table, or
+  method that identifies it.
+- **What goes in and what comes back** — argument or payload shape and the
+  response/result shape, with the types that matter.
+- **Who is allowed to call it** — the auth requirement and, where access is
+  enforced by rules rather than by an endpoint, which rule governs it (link to
+  the security-rules section rather than restating it).
+- **How it fails** — the error cases a caller has to handle, not just the
+  success path.
+- **What it changes** — whether calling it writes, and what else that write
+  affects (a denormalized counter, a triggered function), since that's the
+  part that surprises people.
+
+When the project has no `docs/BACKEND.md` — a static site or landing page with
+no backend of its own — but still talks to something external (a form handler,
+a third-party API, an analytics service), that surface goes in
+`docs/ARQUITETURA.md` instead. The rule is that it's written down somewhere
+obvious, not which file it lands in.
 
 Legal documents (Terms of Use, Privacy Policy) drafted by `compliance` are
 **not** part of this developer doc set and don't belong in `docs/`. They're
