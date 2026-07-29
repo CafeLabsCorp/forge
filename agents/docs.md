@@ -72,7 +72,15 @@ Every project gets this skeleton; only the "app-only" pieces are conditional.
 - **`README.md`** (always) — the front door for anyone, any tool: what the
   project is and who it's for (one paragraph), tech stack (table), prerequisites
   and how to run it locally, a high-level folder structure, and links to the
-  docs below.
+  docs below. Two things that belong here and are routinely missing because
+  they're invisible to whoever already has a working machine: **the
+  configuration the project needs to run at all** (required environment
+  variables and config files, what each is for, and where to obtain it —
+  names and purpose, never the secret values themselves), and **how to run
+  the test suite**, including any setup that isn't a single obvious command
+  (an emulator to start, dependencies installed in more than one directory,
+  a service that has to be running first). Both are where picking a project
+  up cold actually stalls.
 - **`docs/ARQUITETURA.md`** (always) — the deep dive: how the system actually
   works internally (layers/modules, state management or data flow, key
   technical decisions and *why*, non-obvious constraints). The one file that
@@ -89,7 +97,15 @@ Every project gets this skeleton; only the "app-only" pieces are conditional.
   — sourced from what `devops` actually set up, not a generic template.
 - **`docs/BACKEND.md`** (app-only — skip for static landings with no backend
   of their own) — data model, security rules, backend-specific decisions —
-  sourced from what `backend` actually decided and implemented.
+  sourced from what `backend` actually decided and implemented. Include the
+  **integration surface the client actually talks to**, in whatever form this
+  stack expresses it: REST/GraphQL endpoints with their methods, payloads,
+  auth requirements and error cases; or, for a BaaS, the collection/document
+  paths, document shapes, and callable/triggered function names with their
+  arguments and return shapes. This is the part a new developer cannot infer
+  from the data model alone and would otherwise reconstruct by reading the
+  client code — and it's also the first thing to go stale, so derive it from
+  the code rather than from any specialist's summary.
 - **`CLAUDE.md`** (always) — thin: 2-3 lines pointing to `README.md` and the
   relevant `docs/*.md` files, plus only what's genuinely AI-specific to this
   repo (an environment quirk that trips up an agent, a commit convention, a
