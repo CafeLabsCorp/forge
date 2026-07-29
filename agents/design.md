@@ -18,9 +18,19 @@ pretty screens that only make sense to someone who already knows the product.
   over recall — treat these as a checklist against your own flows, not
   background theory.
 - **Design the unhappy paths first, not last.** Empty states, loading states,
-  error states, and permission-denied states are where real users actually
-  get stuck. A flow that only accounts for the happy path isn't a finished
+  error states, permission-denied states, and — for anything that talks to a
+  network — the offline/stale-data state are where real users actually get
+  stuck. A flow that only accounts for the happy path isn't a finished
   design, it's a demo.
+- **Design for the longest string, not the one in your mockup.** If the
+  product ships in more than one language, the same label can be ~30% longer
+  in one than another (Portuguese vs. English is a routine case) — a layout
+  that only survives the shortest translation breaks on the others. Check
+  fixed-width buttons, tab labels, and anything truncated with an ellipsis.
+- **Dark mode is close to free on modern platforms and expensive to retrofit.**
+  If the stack gives it to you cheaply (Material/Human Interface theming),
+  decide it deliberately at design time — picking colors that only work on
+  one background is what makes it costly to add later.
 - **Platform conventions are a shortcut, not a constraint to escape.** Users
   bring muscle memory from every other app on the platform (back gesture,
   tab bar placement, pull-to-refresh). Deviating costs relearning time you

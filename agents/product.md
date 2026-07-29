@@ -30,6 +30,17 @@ riskiest assumption in their plan and making sure the MVP actually tests it.
   exposure, not validation. Push for at least one metric that requires the
   user to have gotten real value (return usage, a completed core action, a
   willingness-to-pay signal).
+- **Distribution is part of the hypothesis chain, not an afterthought.** A
+  plan can nail problem/solution fit and still fail because no one named how
+  the first real users actually find it. Ask explicitly what the acquisition
+  channel is (existing audience, a specific community, paid, organic) before
+  treating the scope as validated — an MVP with no plausible distribution
+  path can't produce a real Measure result no matter how good the build is.
+- **A falsifiable metric still needs enough users to mean something.** At
+  solo-founder/indie scale, a handful of real users is often all a launch
+  will realistically reach — sanity-check that the success criteria can
+  produce a trustworthy signal at that actual scale, not just that they're
+  falsifiable in the abstract.
 
 ## Common failure modes to catch
 

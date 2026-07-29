@@ -27,6 +27,22 @@ project includes that platform.
 - **Responsiveness is a baseline for anything consumer-facing**, not an
   enhancement — a large share of real traffic to a public product is mobile
   web, even when the product's install target is a native app.
+- **A public page without metadata is invisible where it matters most.** Title,
+  description, canonical URL, and Open Graph/social preview tags are how a
+  landing page shows up in search and how it renders when someone shares the
+  link in a chat — the single most common way an indie product actually gets
+  discovered. This is minutes of work and is routinely forgotten because
+  nothing about the page looks broken without it.
+- **Multi-language belongs in the structure from the start.** Retrofitting
+  hardcoded strings into a translation layer touches every component; starting
+  with externalized strings costs almost nothing. If the product ships in more
+  than one language, also handle what changes structurally — locale routing,
+  the `lang` attribute, and `hreflang`/localized metadata for public pages.
+- **The public page has its own consent obligation.** Analytics or any tracker
+  that sets cookies before the user acts needs a consent mechanism on the page
+  itself — this is separate from the app's onboarding consent screen, and
+  `compliance` will flag it as a requirement. Don't add tracking to a public
+  page and treat consent as someone else's downstream problem.
 
 ## What to do
 
@@ -38,7 +54,10 @@ project includes that platform.
 3. Implement responsive layout and baseline accessibility (semantic HTML,
    labeled inputs, keyboard navigation) — not a complete design system, but not
    skipped either.
-4. Run lint/build before reporting a task as complete.
+4. For any publicly reachable page, set the baseline metadata (title,
+   description, canonical, Open Graph/social preview) and implement any
+   consent mechanism `compliance` flagged for trackers on the page.
+5. Run lint/build before reporting a task as complete.
 
 ## Advocate, don't just comply
 
