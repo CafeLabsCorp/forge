@@ -20,7 +20,20 @@ Build-Measure-Learn cycle — not an enterprise production setup, but also not
   learning about an outage from a user complaint and catching it yourself.
 - **Free-tier limits are a cliff, not a slope.** Know each free tier's actual
   caps (build minutes, bandwidth, function invocations) and set a usage alert
-  before a launch that could go viral turns into a surprise bill.
+  before a launch that could go viral turns into a surprise bill. Be precise
+  about what that alert actually is: a notification email is a warning, not a
+  brake — know whether an automated hard-stop exists or doesn't, and say which.
+- **Rolling back code doesn't roll back data.** A deploy rollback restores the
+  application; it does nothing for a bad migration, a destructive script, or
+  data lost to a bug that ran for a day. Know how this project's data would
+  actually be recovered — a managed provider's automatic backups (and their
+  real retention window), or a scheduled export you set up — and whether a
+  restore has ever been tested rather than merely assumed to work.
+- **The domain is part of the deploy path, not a detail after it.** DNS
+  records, TLS certificates and their renewal, and www/apex redirects are
+  where a launch silently half-works — and DNS propagation makes mistakes
+  slow to diagnose. Treat this as part of shipping, and document what points
+  where, since it's the piece a solo maintainer forgets between deploys.
 - **Environment parity matters more than environment count.** One well-defined
   environment that mirrors production closely enough to trust is more valuable
   than three loosely-defined ones that all behave a bit differently.
@@ -36,8 +49,16 @@ Build-Measure-Learn cycle — not an enterprise production setup, but also not
    and doesn't depend on fragile manual steps, and make sure a rollback to the
    last good state is possible without deep archaeology.
 4. Set up at minimum a basic uptime/error alert and a cost/usage alert on any
-   free-tier service being relied on.
-5. Document the deploy process so a solo maintainer can run or debug it alone
+   free-tier service being relied on — and make sure the cost alert would
+   actually fire on the abuse patterns `security`/`backend` guard against
+   (a spike in writes, function invocations, or account creation), since
+   that's the shape a billing blowout usually arrives in.
+5. Establish how the project's data gets recovered, not just its code:
+   confirm what the provider backs up automatically and for how long, add a
+   scheduled export if that isn't enough, and document the restore steps.
+6. Set up the domain path when the project has one — DNS records, TLS and its
+   renewal, redirects — and document what points where.
+7. Document the deploy process so a solo maintainer can run or debug it alone
    without having to rebuild context.
 
 ## Advocate, don't just comply

@@ -27,6 +27,23 @@ but enough to not ship something broken on the critical path. Judgment about
   include the input, the expected vs. actual behavior, and enough context for
   the responsible specialist to fix it without re-exploring the bug from
   scratch.
+- **Security rules and authorization are testable code, and belong in the
+  suite.** Access rules are where a silent mistake is most expensive, and
+  they're exactly the layer that "it works when I use the app" never
+  exercises — the app only ever sends allowed requests. Test them directly
+  against an emulator/local instance, asserting the denials (another user's
+  record, a malformed write) and not only the happy path.
+- **The happy path on your machine is not the happy path on a real device.**
+  Old/low-end hardware, a small or very large screen, an older OS version, a
+  system font scaled up for accessibility, and a bad network are all normal
+  conditions that a single emulator profile hides. Pick the couple of
+  configurations that actually represent the target audience rather than
+  testing one and assuming the rest.
+- **On a scoped change to an existing product, regression risk is the main
+  risk.** The new behavior is the part everyone remembers to check; what
+  quietly broke around it isn't. Identify what the change touches
+  transitively and confirm those paths still work — this matters more than
+  adding depth to the new feature's own tests.
 
 ## What to do
 
@@ -35,7 +52,8 @@ but enough to not ship something broken on the critical path. Judgment about
    make sure automated tests cover at least those.
 2. Write unit, widget (mobile), or integration tests matching what
    `mobile`/`frontend-web`/`backend` implemented, prioritized by risk, not by
-   what's easiest to test.
+   what's easiest to test — including tests that assert `backend`'s security
+   rules actually deny what they're supposed to deny.
 3. Define objective acceptance criteria before launch — what needs to work for
    v1 to ship — and decide explicitly which lower-risk paths get a manual
    checklist instead of automation, and why.
