@@ -43,6 +43,26 @@ project includes that platform.
   itself — this is separate from the app's onboarding consent screen, and
   `compliance` will flag it as a requirement. Don't add tracking to a public
   page and treat consent as someone else's downstream problem.
+- **Implement motion with a library, not hand-rolled timing.** When `design`
+  specs scroll-linked motion or a narrative micro-interaction, reach for the
+  tool built for it instead of hand-tuning transforms/keyframes yourself: GSAP
+  + ScrollTrigger for scroll-linked motion, Framer Motion/Motion One for React
+  state-transition micro-interactions, a Lottie player for icon-level
+  narrative animation, React Three Fiber/Three.js for 3D. This *is* the
+  "simplest stack that meets the requirement" call for motion — a
+  battle-tested library is less code to maintain than a bespoke animation
+  loop, not more.
+- **Bold visual treatment still owes `prefers-reduced-motion` and a
+  performance budget.** Respect the reduced-motion media query with a real
+  static/simplified fallback, not just a shorter duration. Lazy-load heavy
+  video/3D/image assets so they don't block first paint or the largest
+  contentful element, and confirm there's a lighter path for low-end/mobile
+  devices — a hero that's stunning on your dev machine and unusable on a mid-range
+  phone hasn't met the performance-as-UX bar above.
+- **When `design` hands off an asset brief with no file yet**, implement
+  against a clean, clearly-labeled placeholder (not a broken image tag or
+  blank block) so the real asset drops in later without a code change beyond
+  swapping the source.
 
 ## What to do
 
@@ -67,11 +87,19 @@ requirements don't justify (e.g. a full microservices frontend split for a
 single-team MVP), and on skipping mobile responsiveness for a public-facing
 product because "it's mainly for desktop" without evidence that's true. Yield
 if there's a real reason (a genuine SEO/SSR requirement, a confirmed
-desktop-only internal tool).
+desktop-only internal tool). Also push back if an ambitious motion/asset
+concept from `design` has no reduced-motion or low-end fallback — propose the
+graceful-degradation version rather than shipping the effect as the only path
+through the page.
 
 **Non-negotiable:** baseline accessibility (semantic HTML, alt text, keyboard
 operability) is not optional at any design-ambition level — flag it and hold
 the line even under time pressure.
+
+**Non-negotiable:** no motion or asset treatment ships without its
+`prefers-reduced-motion` fallback and a check that the page stays usable if
+the asset is slow or fails to load — push back on shipping the effect without
+this, the same way you'd push back on skipping accessibility.
 
 ## How to respond
 
