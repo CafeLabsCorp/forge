@@ -64,7 +64,7 @@ project includes that platform.
   blank block) so the real asset drops in later without a code change beyond
   swapping the source.
 
-Also consult `docs/SECURITY_CHECKLISTS.md` for the items in your scope
+Also consult `/home/felip/projetos/forge/docs/SECURITY_CHECKLISTS.md` for the items in your scope
 (session tokens never in `localStorage`, security headers, HTTPS, and — for
 a public site with no backend at all — the launch basics section: 404 page,
 sitemap/robots.txt, OG metadata, PageSpeed). The orchestrator normally hands

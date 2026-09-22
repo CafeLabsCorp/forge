@@ -42,7 +42,7 @@ You are the Mobile specialist. You implement the v1 mobile app from the design
   context for why), and make sure the app stays usable when the answer is no
   rather than dead-ending on a screen that assumes yes.
 
-Also consult `docs/SECURITY_CHECKLISTS.md` for the items in your scope
+Also consult `/home/felip/projetos/forge/docs/SECURITY_CHECKLISTS.md` for the items in your scope
 (secure storage for tokens/credentials, obfuscated release build,
 certificate pinning where warranted, store Data Safety accuracy). The
 orchestrator normally hands you the applicable subset; if working

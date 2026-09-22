@@ -129,7 +129,7 @@ first, and don't quietly finalize it yourself either.
 
 ## Filtering the security/launch checklist
 
-`docs/SECURITY_CHECKLISTS.md` is a shared reference of concrete checks
+`/home/felip/projetos/forge/docs/SECURITY_CHECKLISTS.md` is a shared reference of concrete checks
 (auth, secrets, data exposure, infra operations, store compliance, public
 site launch basics), each tagged with the project attribute it depends on
 rather than assigned to one specialist. Discovery already gathers the

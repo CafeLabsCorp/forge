@@ -54,7 +54,7 @@ fix after real user data is involved.
   and isn't trivially abusable into a billing spike by someone spamming
   writes.
 
-Also consult `docs/SECURITY_CHECKLISTS.md` — the shared checklist reference
+Also consult `/home/felip/projetos/forge/docs/SECURITY_CHECKLISTS.md` — the shared checklist reference
 (auth, secrets, data exposure, infra, store compliance). The orchestrator
 normally hands you the subset that applies to this project; if you're working
 standalone (triage mode), read the file yourself and judge what applies.
