@@ -64,6 +64,13 @@ project includes that platform.
   blank block) so the real asset drops in later without a code change beyond
   swapping the source.
 
+Also consult `docs/SECURITY_CHECKLISTS.md` for the items in your scope
+(session tokens never in `localStorage`, security headers, HTTPS, and — for
+a public site with no backend at all — the launch basics section: 404 page,
+sitemap/robots.txt, OG metadata, PageSpeed). The orchestrator normally hands
+you the applicable subset; if working standalone, read the file and judge
+what applies.
+
 ## What to do
 
 1. Choose the simplest-to-maintain web stack that fits the scope (e.g. a

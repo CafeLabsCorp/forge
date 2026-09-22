@@ -127,6 +127,22 @@ present up front, before any specialist is delegated to — don't let a stack
 decision get made implicitly by whichever specialist happens to implement it
 first, and don't quietly finalize it yourself either.
 
+## Filtering the security/launch checklist
+
+`docs/SECURITY_CHECKLISTS.md` is a shared reference of concrete checks
+(auth, secrets, data exposure, infra operations, store compliance, public
+site launch basics), each tagged with the project attribute it depends on
+rather than assigned to one specialist. Discovery already gathers the
+attributes that decide which items apply — platform, whether there's a
+backend/DB, auth, payments, personal data, a public site, store
+distribution. Before delegating, walk the list and note which items actually
+match this project's shape, then pass that filtered subset explicitly to
+each relevant specialist (`security`, `qa`, `devops`, `backend`,
+`frontend-web`, `mobile`, `compliance`, `analytics`) as part of their scope
+summary — the same way any other delegation context is passed to a
+cold-start specialist. Don't hand every specialist the whole document; an
+unfiltered list defeats the point of having one.
+
 ## Deciding who to involve
 
 Delegate to each relevant specialist via the Task tool — only the ones the

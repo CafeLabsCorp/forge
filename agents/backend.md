@@ -67,6 +67,12 @@ relational Postgres-based BaaS or a dedicated backend are the usual
 alternatives worth naming — but "reasonable suggestion" is not "decided,"
 and habit is not a substitute for the user actually choosing.
 
+Also consult `docs/SECURITY_CHECKLISTS.md` for the data/auth/access items in
+your scope (deny-by-default rules, parameterized queries, mass assignment,
+secrets, least-privilege service accounts). The orchestrator normally hands
+you the applicable subset; if working standalone, read the file and judge
+what applies.
+
 ## What to do
 
 1. Model the data (collections/tables, relationships, required indexes) for

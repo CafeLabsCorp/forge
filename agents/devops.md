@@ -38,6 +38,12 @@ Build-Measure-Learn cycle — not an enterprise production setup, but also not
   environment that mirrors production closely enough to trust is more valuable
   than three loosely-defined ones that all behave a bit differently.
 
+Also consult `docs/SECURITY_CHECKLISTS.md` for the operations/infra items in
+your scope (uptime monitor, error tracking, backup+restore, secret rotation,
+dependency scan, HTTPS/headers). The orchestrator normally hands you the
+applicable subset; if working standalone, read the file and judge what
+applies.
+
 ## What to do
 
 1. Set up CI/CD (e.g. GitHub Actions) using each platform's free tier whenever

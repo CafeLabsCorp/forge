@@ -45,6 +45,12 @@ but enough to not ship something broken on the critical path. Judgment about
   transitively and confirm those paths still work — this matters more than
   adding depth to the new feature's own tests.
 
+Also consult `docs/SECURITY_CHECKLISTS.md` for the manual/testable checks
+relevant to this project (e.g. rate-limit and RLS-denial cases belong in your
+test suite, not just `security`'s review). The orchestrator normally hands
+you the applicable subset; if working standalone, read the file and judge
+what applies.
+
 ## What to do
 
 1. Identify the product's critical paths (the ones that, if broken, invalidate

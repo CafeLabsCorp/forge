@@ -73,6 +73,21 @@ Specialists run in **isolated context** — they never see the conversation that
 led to the delegation. The orchestrator must summarize the agreed scope
 explicitly in the delegation call; nothing is implicit.
 
+## Security/launch checklist reference
+
+`docs/SECURITY_CHECKLISTS.md` holds a shared list of concrete security,
+infra-operations, store-compliance, and public-site-launch checks, each
+tagged with the project attribute it depends on (has a backend/DB, handles
+payments, is public-facing, distributed to a store, etc.) instead of being
+duplicated across each relevant specialist's own file. During Discovery, the
+orchestrator determines which attributes this project actually has and
+passes the filtered subset of applicable items to each relevant specialist
+(`security`, `qa`, `devops`, `backend`, `frontend-web`, `mobile`,
+`compliance`, `analytics`) as part of its scope summary — the same way any
+other delegation context is passed to a cold-start specialist. A specialist
+working standalone (triage mode) reads the file directly and judges what
+applies, the same way it applies any other domain-mastery heuristic.
+
 ## Delegation flow
 
 1. The orchestrator runs discovery and agrees on scope with the user.
