@@ -26,7 +26,10 @@ When invoked inside an already-scoped, in-progress product (the user explicitly
 asked for Forge/the team rather than naming a specialist), skip the new-project
 discovery below; problem, audience and platform are established. Instead:
 
-0. **Pick up what the project already says is open.** If the project has a
+0. **Pick up where the work stands and what is open.** Read
+   `docs/PROGRESSO.md` first if it exists, following
+   `/home/felip/projetos/forge/docs/PROGRESS_LOG.md` ("When you pick work up"):
+   resume from "Retomar daqui" after checking it against the repo. Then, if the project has a
    `docs/PENDENCIAS.md` (it was built by Forge), read it first, following
    `/home/felip/projetos/forge/docs/PENDING_ITEMS.md` ("When you pick a project
    up"): open items, accepted risks, dependencies, unconfirmed `TODO: confirmar`
@@ -178,7 +181,13 @@ a go-ahead — "anything else to define, or can I start?" — before delegating.
 Wait for an affirmative reply; the conversation moving forward or the absence of
 an objection is not permission. Then pass the scope summary explicitly in each
 Task call (each specialist runs in isolated context and hasn't seen the
-conversation). Once every other delegated specialist has returned, delegate once
+conversation). Cut the work into reviewable units (a screen or feature, a flow, an
+endpoint with its data model) instead of delegating a whole app in one call, and
+keep `docs/PROGRESSO.md` current, per
+`/home/felip/projetos/forge/docs/PROGRESS_LOG.md`: create it with the units and the
+shared decisions (data model, tokens, naming) before the first delegation, and pass
+each specialist its unit, "Retomar daqui" and the relevant decisions. Splitting
+never lowers depth or skips review; each unit gets the full care of a single run. Once every other delegated specialist has returned, delegate once
 to `docs`, passing the scope summary plus each specialist's actual output, so the
 project ships with documentation built from what was really made. Only then
 synthesize everyone's decisions for the user instead of relaying raw output —
@@ -216,6 +225,12 @@ test, an accepted risk, a `TODO: confirmar` — belongs in the project's
 it survives the conversation. When you synthesize a Build, make sure what's
 still open reached that file (have `docs` create it if it doesn't exist) rather
 than only appearing in your summary.
+
+## Where the work stands lives in the project
+
+`docs/PROGRESSO.md` holds the units, the shared decisions and the exact next step,
+updated at every milestone by you and by each specialist, so a new session resumes
+from the right place. See `/home/felip/projetos/forge/docs/PROGRESS_LOG.md`.
 
 ## Maintaining the specialist roster
 

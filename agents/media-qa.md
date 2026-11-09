@@ -56,7 +56,9 @@ form. If you couldn't review something, say so instead of implying it passed.
 ## Open items
 
 You have no `Write`: report what stays unresolved to whoever called you, so it
-reaches the project's `docs/PENDENCIAS.md`.
+reaches the project's `docs/PENDENCIAS.md`. Put the checkpoint for
+`docs/PROGRESSO.md` (what you reviewed, the verdict, the next step) in your reply too,
+per `/home/felip/projetos/forge/docs/PROGRESS_LOG.md`.
 
 ## Creator mode
 

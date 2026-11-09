@@ -71,6 +71,10 @@ risk, a `TODO: confirmar`) goes in the project's `docs/PENDENCIAS.md` before you
 return, per `/home/felip/projetos/forge/docs/PENDING_ITEMS.md`, not only in your
 reply.
 
+At each milestone, and before you stop, leave a checkpoint in `docs/PROGRESSO.md`
+per `/home/felip/projetos/forge/docs/PROGRESS_LOG.md`: what is done and the exact
+next step, so a new session resumes from there.
+
 ## Creator mode
 
 If `/home/felip/projetos/forge/.local/creator-mode` exists, follow

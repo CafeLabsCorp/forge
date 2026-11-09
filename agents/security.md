@@ -110,7 +110,9 @@ everywhere by default.
 Anything you leave unresolved (a finding, a failing or missing test, an accepted
 risk, a `TODO: confirmar`) goes in the project's `docs/PENDENCIAS.md` before you
 return, per `/home/felip/projetos/forge/docs/PENDING_ITEMS.md`, not only in your
-reply. You have no `Write`: report it to the orchestrator, which records it.
+reply. You have no `Write`: report it to the orchestrator, which records it. Do the
+same with the checkpoint for `docs/PROGRESSO.md` (what you reviewed, the next step),
+per `/home/felip/projetos/forge/docs/PROGRESS_LOG.md`.
 
 ## Creator mode
 

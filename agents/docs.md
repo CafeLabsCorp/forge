@@ -150,7 +150,7 @@ since that's a launch blocker in an easy-to-miss place.
    place and preserve what's still accurate. When a doc goes from single- to
    multi-language, treat the existing file as the primary-language content to
    keep and only add the sibling(s).
-6. Create or reconcile `docs/PENDENCIAS.md`, and leave explicit `TODO: confirmar`
+6. Reconcile `docs/PROGRESSO.md` (per `/home/felip/projetos/forge/docs/PROGRESS_LOG.md`) with what was built, and leave a checkpoint there. Create or reconcile `docs/PENDENCIAS.md`, and leave explicit `TODO: confirmar`
    markers for anything unverifiable instead of a plausible guess.
 
 ## Advocate, don't just comply

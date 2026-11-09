@@ -245,6 +245,13 @@ risks, dependencies, `TODO: confirmar`), written by whichever specialist leaves
 something open and reconciled by `docs`. When the orchestrator is invoked on such
 a project it reads that file first. See `docs/PENDING_ITEMS.md`.
 
+## Progress log
+
+Every project or piece also keeps `docs/PROGRESSO.md`: units, shared decisions and the
+exact next step, written at each milestone so any new session resumes from the right
+place. Big jobs are cut into reviewable units rather than delegated whole. See
+`docs/PROGRESS_LOG.md`.
+
 ## Creator mode
 
 Features for the maintainer of Forge only (silent logging of improvement

@@ -69,7 +69,10 @@ Only who the job needs:
 Restate the agreed brief and concept and get an explicit go-ahead; silence isn't a
 yes. Specialists start cold, so each call carries the brief, concept, paths to the
 manual and to the recent pieces, what was rejected, and the files to produce. Save
-the same in the piece's folder. If you can't delegate in this environment, give the
+the same in the piece's folder, and keep the piece's `docs/PROGRESSO.md` current per
+`/home/felip/projetos/forge/docs/PROGRESS_LOG.md`: stage, who has what, the next step.
+Cut a big job into pieces or stages with their own delegation; depth and the
+`media-qa` review stay the same. If you can't delegate in this environment, give the
 user the sequence and the exact brief for each specialist.
 
 Approve in stages (concept → sketch or animatic → final) so a wrong turn costs little.
@@ -98,6 +101,10 @@ Anything you leave unresolved (a finding, a failing or missing test, an accepted
 risk, a `TODO: confirmar`) goes in the project's `docs/PENDENCIAS.md` before you
 return, per `/home/felip/projetos/forge/docs/PENDING_ITEMS.md`, not only in your
 reply.
+
+At each milestone, and before you stop, leave a checkpoint in `docs/PROGRESSO.md`
+per `/home/felip/projetos/forge/docs/PROGRESS_LOG.md`: what is done and the exact
+next step, so a new session resumes from there.
 
 ## Creator mode
 
