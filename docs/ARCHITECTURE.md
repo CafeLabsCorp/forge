@@ -59,7 +59,8 @@ involve, delegates to them, and synthesizes their output back to the user.
 
 Each specialist is a separate subagent file (for example: `product`, `design`,
 `mobile`, `backend`, `frontend-web`, `devops`, `qa`, `security`, `compliance`,
-`analytics`, `docs`, `motion`, `video-editor`, `audio`, `media-qa` — the roster is a starting point, not a fixed list) with:
+`analytics`, `docs`, `creative-director`, `content-strategist`, `motion`, `video-editor`, `audio`,
+`media-qa` — the roster is a starting point, not a fixed list) with:
 
 - a `name` and a `description` containing a clear trigger — the phrases that
   should activate it;
@@ -210,6 +211,16 @@ extracted from a real, working team of agents used to ship production MVPs. It
 is deliberately not tied to any specific product domain or tech stack — treat
 each specialist file as a template to adapt to your own stack, team roles, and
 decision-making priorities.
+
+## Two front doors: product and studio
+
+`orchestrator` leads software products through Build-Measure-Learn.
+`creative-director` leads brand, campaign, content and video work through concept
+and staged approval, delegating to `content-strategist`, `design`, `motion`,
+`video-editor` and `audio`, with `media-qa` reviewing every finished piece. `design`,
+`compliance`, `analytics` and `docs` serve both. A subagent can delegate to another
+within the runtime's depth limit; the leads fall back to naming the sequence for the
+user if delegation isn't available.
 
 ## Medium playbooks and shared references
 
