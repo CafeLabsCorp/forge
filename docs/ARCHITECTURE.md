@@ -127,6 +127,10 @@ applies, the same way it applies any other domain-mastery heuristic.
   owns data/infrastructure architecture.
 - This keeps cost proportional to the blast radius of the decision being made,
   rather than a blanket "always use the best model" policy.
+- One deliberate exception: `design` runs on the top-tier model (changed
+  2026-11-09) not for blast radius but for creative range — on the mid-tier
+  model its output kept converging on the expected version of a product's
+  genre. It is the first specialist to revisit if token cost needs trimming.
 
 ## Advocate, don't just comply
 
