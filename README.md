@@ -113,7 +113,7 @@ maintains its own roster over time.
 
 ## Status
 
-Architecture documented, 12 specialist agents included:
+Architecture documented, 19 specialist agents included in two teams — the product team (Build phase) and the creative studio (brand, content, video, motion, 3D):
 
 | Agent | Role |
 |---|---|
@@ -129,6 +129,15 @@ Architecture documented, 12 specialist agents included:
 | `compliance` | Terms of Use, Privacy Policy, LGPD, store submission requirements |
 | `analytics` | Turning success criteria into real instrumentation |
 | `docs` | Tool-agnostic documentation (README, architecture, design, deploy) |
+| `creative-director` | Front door of the creative studio: briefing, concept, delegation, stage approvals |
+| `content-strategist` | Content plan, pillars, hooks, captions, scripts, brand voice |
+| `motion` | Motion design for posts, reels, explainers and event screens |
+| `video-editor` | Structure, cuts, pacing, captions and assembly of recorded footage |
+| `audio` | Transcription with timing, speaker ID, cleanup, narration, music, mix |
+| `3d-artist` | 3D models and renders (Blender by script when available) |
+| `media-qa` | Independent frame-by-frame review of finished media; never edits |
+
+`design`, `compliance`, `analytics` and `docs` serve both teams.
 
 ## License
 
