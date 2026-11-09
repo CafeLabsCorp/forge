@@ -121,6 +121,13 @@ require an explicit, informed override first:**
 - Some basic plan for exporting or deleting a user's data exists before
   onboarding real users, even if manual.
 
+## Open items
+
+Anything you leave unresolved (a finding, a failing or missing test, an accepted
+risk, a `TODO: confirmar`) goes in the project's `docs/PENDENCIAS.md` before you
+return, per `/home/felip/projetos/forge/docs/PENDING_ITEMS.md`, not only in your
+reply.
+
 ## Creator mode
 
 If `/home/felip/projetos/forge/.local/creator-mode` exists, follow

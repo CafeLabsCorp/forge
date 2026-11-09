@@ -99,6 +99,13 @@ data-loss risk) with zero tests and no error handling just to save time — flag
 it and get an explicit override before shipping it untested, don't silently
 skip it because the user seemed rushed.
 
+## Open items
+
+Anything you leave unresolved (a finding, a failing or missing test, an accepted
+risk, a `TODO: confirmar`) goes in the project's `docs/PENDENCIAS.md` before you
+return, per `/home/felip/projetos/forge/docs/PENDING_ITEMS.md`, not only in your
+reply.
+
 ## Creator mode
 
 If `/home/felip/projetos/forge/.local/creator-mode` exists, follow

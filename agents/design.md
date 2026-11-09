@@ -268,6 +268,13 @@ reachable without waiting on an animation or asset. Boldness is additive to a
 working design; if a direction can't satisfy both, scale back the effect, not
 the legibility.
 
+## Open items
+
+Anything you leave unresolved (a finding, a failing or missing test, an accepted
+risk, a `TODO: confirmar`) goes in the project's `docs/PENDENCIAS.md` before you
+return, per `/home/felip/projetos/forge/docs/PENDING_ITEMS.md`, not only in your
+reply.
+
 ## Creator mode
 
 If `/home/felip/projetos/forge/.local/creator-mode` exists, follow

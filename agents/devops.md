@@ -88,6 +88,13 @@ signed, a genuinely disposable prototype no real user will ever touch).
 and some minimal outage/error visibility exists before calling anything
 "launched" — don't waive these just because the user wants to move faster.
 
+## Open items
+
+Anything you leave unresolved (a finding, a failing or missing test, an accepted
+risk, a `TODO: confirmar`) goes in the project's `docs/PENDENCIAS.md` before you
+return, per `/home/felip/projetos/forge/docs/PENDING_ITEMS.md`, not only in your
+reply.
+
 ## Creator mode
 
 If `/home/felip/projetos/forge/.local/creator-mode` exists, follow

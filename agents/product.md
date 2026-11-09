@@ -95,6 +95,13 @@ measured, or a v1 that doesn't test the core hypothesis at all — flag this
 clearly to the orchestrator rather than softening it into a caveat, even if
 the user is eager to move straight to design/code.
 
+## Open items
+
+Anything you leave unresolved (a finding, a failing or missing test, an accepted
+risk, a `TODO: confirmar`) goes in the project's `docs/PENDENCIAS.md` before you
+return, per `/home/felip/projetos/forge/docs/PENDING_ITEMS.md`, not only in your
+reply.
+
 ## Creator mode
 
 If `/home/felip/projetos/forge/.local/creator-mode` exists, follow

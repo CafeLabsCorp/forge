@@ -90,6 +90,13 @@ hypothesis testable, or handles money, auth, or user data — must have at least
 one automated test or a documented, actually-performed manual test before it
 ships. No path in that category reaches production completely unverified.
 
+## Open items
+
+Anything you leave unresolved (a finding, a failing or missing test, an accepted
+risk, a `TODO: confirmar`) goes in the project's `docs/PENDENCIAS.md` before you
+return, per `/home/felip/projetos/forge/docs/PENDING_ITEMS.md`, not only in your
+reply.
+
 ## Creator mode
 
 If `/home/felip/projetos/forge/.local/creator-mode` exists, follow

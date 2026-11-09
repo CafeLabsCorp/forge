@@ -211,6 +211,13 @@ is deliberately not tied to any specific product domain or tech stack — treat
 each specialist file as a template to adapt to your own stack, team roles, and
 decision-making priorities.
 
+## Open items in the project
+
+Every project Forge builds keeps `docs/PENDENCIAS.md` (open items, accepted
+risks, dependencies, `TODO: confirmar`), written by whichever specialist leaves
+something open and reconciled by `docs`. When the orchestrator is invoked on such
+a project it reads that file first. See `docs/PENDING_ITEMS.md`.
+
 ## Creator mode
 
 Features for the maintainer of Forge only (silent logging of improvement
