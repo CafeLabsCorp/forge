@@ -60,7 +60,7 @@ involve, delegates to them, and synthesizes their output back to the user.
 Each specialist is a separate subagent file (for example: `product`, `design`,
 `mobile`, `backend`, `frontend-web`, `devops`, `qa`, `security`, `compliance`,
 `analytics`, `docs`, `creative-director`, `content-strategist`, `motion`, `video-editor`, `audio`,
-`media-qa` — the roster is a starting point, not a fixed list) with:
+`3d-artist`, `media-qa` — the roster is a starting point, not a fixed list) with:
 
 - a `name` and a `description` containing a clear trigger — the phrases that
   should activate it;
@@ -217,7 +217,7 @@ decision-making priorities.
 `orchestrator` leads software products through Build-Measure-Learn.
 `creative-director` leads brand, campaign, content and video work through concept
 and staged approval, delegating to `content-strategist`, `design`, `motion`,
-`video-editor` and `audio`, with `media-qa` reviewing every finished piece. `design`,
+`video-editor`, `audio` and `3d-artist`, with `media-qa` reviewing every finished piece. `design`,
 `compliance`, `analytics` and `docs` serve both. A subagent can delegate to another
 within the runtime's depth limit; the leads fall back to naming the sequence for the
 user if delegation isn't available.
@@ -231,6 +231,12 @@ every call. `motion` does the same with `motion-repertoire.md`. Shared reference
 and `docs/VISUAL_RESEARCH.md`. `docs/playbooks/video-pipeline.md` defines the
 files `audio`, `video-editor` and `motion` hand to each other. Forge is public: only generic rules live here;
 specific brands and clients stay in each brand's manual.
+
+## Optional tools
+
+Software not everyone has (Blender) is configured per person in the git-ignored
+`.local/tools.conf`. A missing tool never blocks the work, and nothing is installed
+unasked. See `docs/OPTIONAL_TOOLS.md`.
 
 ## Open items in the project
 

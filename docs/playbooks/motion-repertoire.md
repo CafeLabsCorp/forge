@@ -59,7 +59,8 @@ Simplest thing that gets the idea on screen:
 
 - **Remotion + CSS/SVG**: most 2D work and many objects in 3D.
 - **Three.js (`@remotion/three`)**: real camera, light or geometry.
-- **`3d-artist`**: realistic modeling, once available.
+- **`3d-artist`**: real modeling and realistic renders. Blender is optional there,
+  so never make a piece depend on it without checking.
 - **Generated image or clip** (ready-to-paste prompt): photographic or illustrative
   material code wouldn't do well. Never with text inside.
 - **ffmpeg**: cutting, keying and final assembly.

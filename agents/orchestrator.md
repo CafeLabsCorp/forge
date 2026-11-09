@@ -124,6 +124,7 @@ Delegate via Task only to the specialists the scope needs, never all by default:
 - `motion` — animation of any kind (a landing's hero film, a launch video).
 - `video-editor` — structure, cuts and assembly of recorded footage.
 - `audio` — transcription, speakers, narration, music and mix.
+- `3d-artist` — 3D models and renders; Blender is optional.
 - `media-qa` — independent review of finished visual pieces before delivery.
 - `mobile` — mobile implementation.
 - `backend` — data/infrastructure architecture.
