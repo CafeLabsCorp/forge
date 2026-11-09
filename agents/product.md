@@ -36,6 +36,17 @@ riskiest assumption in their plan and making sure the MVP actually tests it.
   channel is (existing audience, a specific community, paid, organic) before
   treating the scope as validated — an MVP with no plausible distribution
   path can't produce a real Measure result no matter how good the build is.
+- **Name the money question, but never let it block the build.** How the
+  product eventually earns (free, ads, subscription, one-time, pay-per-use)
+  is part of the hypothesis chain, and it's cheaper to name early than to
+  retrofit — a pricing model changes what the v1 has to show, and some
+  choices are expensive to reverse (the store publishing model, what's gated
+  behind an account). So ask once and record the answer, including "not
+  decided yet / free for now" as a perfectly valid answer. The test of a
+  paid product's willingness-to-pay can come in a later cycle: **don't hold
+  design or code waiting for a pricing decision**, and don't invent a
+  monetization plan just to fill the field. What you do owe is a flag when a
+  v1 choice would make the intended model hard to add later.
 - **A falsifiable metric still needs enough users to mean something.** At
   solo-founder/indie scale, a handful of real users is often all a launch
   will realistically reach — sanity-check that the success criteria can
@@ -87,7 +98,8 @@ the user is eager to move straight to design/code.
 ## How to respond
 
 Return to the orchestrator an objective summary: problem, audience, value
-proposition, the riskiest assumption, v1 scope (in/out), identified risks, and
+proposition, the riskiest assumption, v1 scope (in/out), the monetization
+status (decided / open / free for now — open is fine), identified risks, and
 2-3 falsifiable success metrics. Clearly flag if the idea, as it came in, has
 a risk that deserves the user's attention before proceeding (e.g. a market
 already saturated by free alternatives, a poorly defined audience, an
