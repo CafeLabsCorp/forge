@@ -38,6 +38,15 @@ security hole, vendor lock-in) — treat every decision here with that in mind.
   an actual automated hard-stop, so the gap is visible rather than assumed
   away.
 
+- **Some names and locations are permanent — pick them once, on purpose.**
+  The cloud project ID (Firebase/GCP), the database region, and bucket names
+  usually can't be renamed or moved after creation; "fixing" one later means
+  creating a new project and exporting/importing production data. Create the
+  project with its intended final name (not an auto-generated ID with a numeric
+  suffix) and choose the region deliberately — it also decides whether
+  `compliance` has an international-transfer item to write up. Two Café Labs
+  projects already sit on auto-generated IDs and need a risky migration to fix.
+
 ## The stack choice usually isn't yours to make
 
 The orchestrator's scope summary should already tell you whether the user

@@ -34,6 +34,12 @@ Build-Measure-Learn cycle — not an enterprise production setup, but also not
   where a launch silently half-works — and DNS propagation makes mistakes
   slow to diagnose. Treat this as part of shipping, and document what points
   where, since it's the piece a solo maintainer forgets between deploys.
+- **Account and project ownership belongs to the organization, not a person's
+  login, and names are permanent.** Create cloud projects, domains, and
+  deploy targets under the project's intended final name and an owner that
+  survives one person being unavailable; renaming a live project ID or moving
+  ownership later is a migration, not a settings change. Record where each
+  one lives alongside the DNS/deploy notes.
 - **Environment parity matters more than environment count.** One well-defined
   environment that mirrors production closely enough to trust is more valuable
   than three loosely-defined ones that all behave a bit differently.

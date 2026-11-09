@@ -42,6 +42,13 @@ You are the Mobile specialist. You implement the v1 mobile app from the design
   context for why), and make sure the app stays usable when the answer is no
   rather than dead-ending on a screen that assumes yes.
 
+- **The application ID and the signing key are permanent.** The
+  `applicationId`/bundle identifier (including its domain prefix, e.g.
+  `com.` vs `net.`) can't change once the app is published, and losing the
+  upload/signing keystore locks you out of updating it. Settle the identifier
+  with the user before the first store build, and back up the keystore and
+  its password somewhere other than the dev machine — never in the repo.
+
 Also consult `/home/felip/projetos/forge/docs/SECURITY_CHECKLISTS.md` for the items in your scope
 (secure storage for tokens/credentials, obfuscated release build,
 certificate pinning where warranted, store Data Safety accuracy). The
