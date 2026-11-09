@@ -34,6 +34,9 @@ its reply and the orchestrator (or `docs`) records it. `docs` creates the file i
 it doesn't exist and reconciles it against the repo at the end of Build. Never
 duplicate an item in the README or in another doc: link to it.
 
+If whoever called you restricted where you may write, that restriction wins: put
+the items in your reply instead.
+
 ## When you pick a project up
 
 When the orchestrator is invoked on an existing project with this file (triage

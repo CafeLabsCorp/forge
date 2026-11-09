@@ -40,6 +40,9 @@ same technique count as one. Research first, per
 `/home/felip/projetos/forge/docs/VISUAL_RESEARCH.md`. A brief saying "just build
 it" narrows the options, but a complex piece still gets a plan confirmed first.
 
+As a subagent you can't talk to the user mid-job: return your questions together
+with the approaches, and stop there.
+
 ## Repertoire and tools
 
 Read `/home/felip/projetos/forge/docs/playbooks/motion-repertoire.md` when choosing

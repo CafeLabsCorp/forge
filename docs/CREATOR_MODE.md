@@ -30,6 +30,9 @@ the mode is on):
 5. Specialists without `Write` (e.g. `security`) put the note in their reply to
    the orchestrator, which logs it.
 
+If whoever called you restricted where you may write, that restriction wins: put
+the note in your reply instead.
+
 Don't note one-off project quirks or taste calls: only things that would
 improve Forge for the next project.
 

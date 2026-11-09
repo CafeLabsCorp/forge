@@ -25,7 +25,8 @@ medium and read its playbook in `/home/felip/projetos/forge/docs/playbooks/`
 
 No playbook fits? Reason from the fundamentals below and say so. If the piece
 belongs to a brand with a manual, the manual outranks every default here: read
-it first, and use its colors, fonts and logos only.
+it first, and use its colors, fonts and logos only. Its numbers (safe zones,
+sizes, margins) replace any number in a playbook.
 
 **Fundamentals that hold in every medium:** one clear focal point and a reading
 order you can state; hierarchy by size, weight and space before decoration; a
@@ -143,6 +144,9 @@ left to guess:
    confirmation. Publishing a finished Artifact with zero conversation on a rich
    surface is the failure this guards against.
 
+**When you run as a subagent** you can't talk to the user mid-job: return your
+questions together with the concepts or plan, and stop there.
+
 ## Motion and asset repertoire — reach beyond static screens
 
 A well-laid-out static screen is the floor. Before finalizing a direction,
@@ -196,7 +200,8 @@ imagery — deliberately, for the surfaces that earn it (same dosage logic).
   Google Vids…), complete in one block, one asset at a time rather than a pile.
   Offer it proactively whenever a generated image would improve the result
   (background scene, character, mockup, illustration) instead of waiting to be
-  asked. Return briefs to the orchestrator; never silently substitute generic
+  asked. Exception: when the same object must repeat exactly across pieces, a
+  generated image won't hold it; build it in code or vector instead. Return briefs to the orchestrator; never silently substitute generic
   stock or drop the idea.
 
 ## What to do

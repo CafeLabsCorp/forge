@@ -10,8 +10,13 @@ film title sequences, motion reels, and anything outside the piece's category.
 Search for the idea or the feeling, not just the product type. Anything the user
 already supplied comes first.
 
+Good entry points: Behance and Dribbble search pages, Awwwards, and Wikipedia for
+facts about an object or a symbol. Some sites block automated access or put a login
+over the results; report which sources failed and what you could only see partly.
+
 Use the browser tools when a page needs rendering; screenshots are how you see a
-visual site. If a site asks for a login you can't complete, move on and say so:
+visual site. Always open pages in an isolated context, never in a session the user
+already has open. If a site asks for a login you can't complete, move on and say so:
 don't try to get around a login or a block. Never type or store anyone's password.
 
 ## How much

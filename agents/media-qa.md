@@ -30,6 +30,10 @@ them before the person who asked does. You don't fix anything.
   declared series.
 - **Sets:** if one piece of a set was adjusted, confirm the others are unchanged.
 
+`ffmpeg` and `ffprobe` measure most of this even when image libraries are missing:
+`psnr` compares a logo region against a reference, `signalstats` gives levels, and
+`crop` isolates a region for comparison.
+
 Bash is for inspection only: extract frames and measure, writing only to a
 temporary folder. Never change the source or the deliverable.
 
