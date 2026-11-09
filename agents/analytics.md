@@ -45,6 +45,13 @@ product intuition is.
   event and confirm it actually arrives in the tool before calling the
   instrumentation done.
 
+- **No event fires before consent where consent is required.** On a public
+  web page, and in any app whose consent screen gates analytics, the tool's
+  initialization and every event sit behind the user's choice — and
+  revoking consent has to actually stop them. An event that's correct but
+  fires pre-consent is a compliance defect, not a measurement detail; verify
+  the gate the same way you verify the event arrives.
+
 ## What to do
 
 1. Take `product`'s success metrics and define the exact event(s) that would
@@ -55,7 +62,8 @@ product intuition is.
 3. Implement the minimal instrumentation needed for those events — resist
    requests to track everything.
 4. Verify each event actually fires and arrives in the tool — don't report
-   instrumentation as done based on the code being written.
+   instrumentation as done based on the code being written — and that nothing
+   fires before consent where consent is required.
 5. Set up (or document how to check) a basic view/dashboard covering just
    those metrics, so Measure has something to look at without a data
    engineering effort.

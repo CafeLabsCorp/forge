@@ -45,6 +45,13 @@ but enough to not ship something broken on the critical path. Judgment about
   transitively and confirm those paths still work — this matters more than
   adding depth to the new feature's own tests.
 
+- **Flows a store or regulator requires are critical paths, not polish.**
+  Account deletion actually deleting the data, consent being revocable from
+  settings, and a tracker staying silent until consent is given are the
+  things `compliance` makes mandatory and a casual "it works" pass never
+  touches — test them directly, because a store rejection or a complaint is
+  how you'd otherwise find out they're broken.
+
 Also consult `/home/felip/projetos/forge/docs/SECURITY_CHECKLISTS.md` for the manual/testable checks
 relevant to this project (e.g. rate-limit and RLS-denial cases belong in your
 test suite, not just `security`'s review). The orchestrator normally hands

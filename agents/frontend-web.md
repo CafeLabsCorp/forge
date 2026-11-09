@@ -84,7 +84,12 @@ what applies.
 4. For any publicly reachable page, set the baseline metadata (title,
    description, canonical, Open Graph/social preview) and implement any
    consent mechanism `compliance` flagged for trackers on the page.
-5. Run lint/build before reporting a task as complete.
+5. Before calling a public page done, search the code for any analytics/tracker
+   import or script (e.g. `@vercel/analytics`, `gtag`, a pixel) and confirm it
+   only loads **after** the user consents — an installed tracker with no
+   consent gate has already shipped on real landing pages in this portfolio,
+   so verify it, don't assume `compliance`'s note was acted on.
+6. Run lint/build before reporting a task as complete.
 
 ## Advocate, don't just comply
 
