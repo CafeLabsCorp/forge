@@ -59,7 +59,7 @@ involve, delegates to them, and synthesizes their output back to the user.
 
 Each specialist is a separate subagent file (for example: `product`, `design`,
 `mobile`, `backend`, `frontend-web`, `devops`, `qa`, `security`, `compliance`,
-`analytics`, `docs`, `motion`, `media-qa` — the roster is a starting point, not a fixed list) with:
+`analytics`, `docs`, `motion`, `video-editor`, `audio`, `media-qa` — the roster is a starting point, not a fixed list) with:
 
 - a `name` and a `description` containing a clear trigger — the phrases that
   should activate it;
@@ -217,7 +217,8 @@ decision-making priorities.
 reads one playbook per job from `docs/playbooks/`, so range doesn't add weight to
 every call. `motion` does the same with `motion-repertoire.md`. Shared references:
 `docs/MOTION_QUALITY.md` (mandatory finish checklist for `motion` and `media-qa`)
-and `docs/VISUAL_RESEARCH.md`. Forge is public: only generic rules live here;
+and `docs/VISUAL_RESEARCH.md`. `docs/playbooks/video-pipeline.md` defines the
+files `audio`, `video-editor` and `motion` hand to each other. Forge is public: only generic rules live here;
 specific brands and clients stay in each brand's manual.
 
 ## Open items in the project

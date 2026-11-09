@@ -122,6 +122,8 @@ Delegate via Task only to the specialists the scope needs, never all by default:
 - `product` — validate/refine the idea before any code.
 - `design` — flows, wireframes, visual identity, and any other design medium.
 - `motion` — animation of any kind (a landing's hero film, a launch video).
+- `video-editor` — structure, cuts and assembly of recorded footage.
+- `audio` — transcription, speakers, narration, music and mix.
 - `media-qa` — independent review of finished visual pieces before delivery.
 - `mobile` — mobile implementation.
 - `backend` — data/infrastructure architecture.

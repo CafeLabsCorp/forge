@@ -46,7 +46,9 @@ Read `/home/felip/projetos/forge/docs/playbooks/motion-repertoire.md` when choos
 how to build. Reuse a project's existing theme and helpers when it has them.
 
 Write timing in seconds rather than frames, so changing fps doesn't change the
-piece. When there's narration, timing comes from the spoken words, measured.
+piece. When there's narration, timing comes from the
+spoken words, measured: read `tempos.json` from `audio` (see
+`/home/felip/projetos/forge/docs/playbooks/video-pipeline.md`).
 
 If a piece needs an image, a clip or a model that doesn't exist, hand over a
 ready-to-paste prompt for the tool the user has, one at a time.
