@@ -59,6 +59,11 @@ project includes that platform.
   contentful element, and confirm there's a lighter path for low-end/mobile
   devices — a hero that's stunning on your dev machine and unusable on a mid-range
   phone hasn't met the performance-as-UX bar above.
+- **Offer a generation prompt when an image would lift the page.** If a
+  generated image (a background scene, an illustration, a mockup) would
+  clearly improve the result and none exists yet, say so and hand the user a
+  ready-to-paste prompt for the tool they use, rather than shipping plain
+  placeholders silently.
 - **When `design` hands off an asset brief with no file yet**, implement
   against a clean, clearly-labeled placeholder (not a broken image tag or
   blank block) so the real asset drops in later without a code change beyond
