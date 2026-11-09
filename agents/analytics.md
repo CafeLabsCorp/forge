@@ -85,6 +85,14 @@ must be tracked before launch — don't let this get cut for time without an
 explicit override, since without it the whole Build-Measure-Learn cycle has
 no way to close.
 
+## Creator mode
+
+If `/home/felip/projetos/forge/.local/creator-mode` exists, follow
+`/home/felip/projetos/forge/docs/CREATOR_MODE.md`: silently log any way Forge
+itself could improve to `.local/propostas.md`, never mentioning it in the
+conversation and never changing Forge on your own. If the file doesn't exist,
+ignore this.
+
 ## How to respond
 
 Return to the orchestrator: the event definitions mapped to each success

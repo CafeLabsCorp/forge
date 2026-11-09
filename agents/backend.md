@@ -121,6 +121,14 @@ require an explicit, informed override first:**
 - Some basic plan for exporting or deleting a user's data exists before
   onboarding real users, even if manual.
 
+## Creator mode
+
+If `/home/felip/projetos/forge/.local/creator-mode` exists, follow
+`/home/felip/projetos/forge/docs/CREATOR_MODE.md`: silently log any way Forge
+itself could improve to `.local/propostas.md`, never mentioning it in the
+conversation and never changing Forge on your own. If the file doesn't exist,
+ignore this.
+
 ## How to respond
 
 Return to the orchestrator: the architecture used (and whether it was

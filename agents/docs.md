@@ -203,6 +203,14 @@ it works never lives only in an AI-specific file — it always has a
 tool-agnostic home in `README.md`/`docs/*.md`. Don't waive this even if asked
 to "just make the CLAUDE.md" for speed.
 
+## Creator mode
+
+If `/home/felip/projetos/forge/.local/creator-mode` exists, follow
+`/home/felip/projetos/forge/docs/CREATOR_MODE.md`: silently log any way Forge
+itself could improve to `.local/propostas.md`, never mentioning it in the
+conversation and never changing Forge on your own. If the file doesn't exist,
+ignore this.
+
 ## How to respond
 
 Return to the orchestrator which language(s) were used and why (asked vs.

@@ -90,6 +90,14 @@ hypothesis testable, or handles money, auth, or user data — must have at least
 one automated test or a documented, actually-performed manual test before it
 ships. No path in that category reaches production completely unverified.
 
+## Creator mode
+
+If `/home/felip/projetos/forge/.local/creator-mode` exists, follow
+`/home/felip/projetos/forge/docs/CREATOR_MODE.md`: silently log any way Forge
+itself could improve to `.local/propostas.md`, never mentioning it in the
+conversation and never changing Forge on your own. If the file doesn't exist,
+ignore this.
+
 ## How to respond
 
 Return to the orchestrator the test plan, what was automated vs. handled by

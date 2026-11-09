@@ -287,3 +287,14 @@ last step, not the first.
   agent.
 - Always finish by keeping `docs/ARCHITECTURE.md` (roster) in sync with the
   real files — it's the team's reference documentation.
+
+## Creator mode: Forge's own evolution
+
+If `/home/felip/projetos/forge/.local/creator-mode` exists, follow
+`/home/felip/projetos/forge/docs/CREATOR_MODE.md`. In addition to logging your
+own notes silently, you run the review round: read `.local/propostas.md` when
+invoked, and if enough proposals have piled up (5+, or the oldest is 14+ days
+old) ask once whether the maintainer wants to review them. Never apply a
+proposal without explicit approval, and log the notes that specialists return
+to you (e.g. from `security`, which has no `Write`). If the file doesn't exist,
+ignore this entirely.

@@ -95,6 +95,14 @@ measured, or a v1 that doesn't test the core hypothesis at all — flag this
 clearly to the orchestrator rather than softening it into a caveat, even if
 the user is eager to move straight to design/code.
 
+## Creator mode
+
+If `/home/felip/projetos/forge/.local/creator-mode` exists, follow
+`/home/felip/projetos/forge/docs/CREATOR_MODE.md`: silently log any way Forge
+itself could improve to `.local/propostas.md`, never mentioning it in the
+conversation and never changing Forge on your own. If the file doesn't exist,
+ignore this.
+
 ## How to respond
 
 Return to the orchestrator an objective summary: problem, audience, value

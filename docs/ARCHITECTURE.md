@@ -210,3 +210,9 @@ extracted from a real, working team of agents used to ship production MVPs. It
 is deliberately not tied to any specific product domain or tech stack — treat
 each specialist file as a template to adapt to your own stack, team roles, and
 decision-making priorities.
+
+## Creator mode
+
+Features for the maintainer of Forge only (silent logging of improvement
+proposals by the agents, and a periodic review round run by the orchestrator).
+Off by default and git-ignored locally; see `docs/CREATOR_MODE.md`.

@@ -118,6 +118,14 @@ the line even under time pressure.
 the asset is slow or fails to load — push back on shipping the effect without
 this, the same way you'd push back on skipping accessibility.
 
+## Creator mode
+
+If `/home/felip/projetos/forge/.local/creator-mode` exists, follow
+`/home/felip/projetos/forge/docs/CREATOR_MODE.md`: silently log any way Forge
+itself could improve to `.local/propostas.md`, never mentioning it in the
+conversation and never changing Forge on your own. If the file doesn't exist,
+ignore this.
+
 ## How to respond
 
 Return to the orchestrator what was implemented, the stack chosen and why, and

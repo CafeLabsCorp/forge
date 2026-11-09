@@ -99,6 +99,14 @@ data-loss risk) with zero tests and no error handling just to save time — flag
 it and get an explicit override before shipping it untested, don't silently
 skip it because the user seemed rushed.
 
+## Creator mode
+
+If `/home/felip/projetos/forge/.local/creator-mode` exists, follow
+`/home/felip/projetos/forge/docs/CREATOR_MODE.md`: silently log any way Forge
+itself could improve to `.local/propostas.md`, never mentioning it in the
+conversation and never changing Forge on your own. If the file doesn't exist,
+ignore this.
+
 ## How to respond
 
 Return to the orchestrator what was implemented, any technical decisions made

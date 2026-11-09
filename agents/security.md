@@ -105,6 +105,16 @@ genuinely pre-launch prototype with no real user data at stake, a lower bar is
 reasonable — say so explicitly rather than applying production rigor
 everywhere by default.
 
+## Creator mode
+
+If `/home/felip/projetos/forge/.local/creator-mode` exists, follow
+`/home/felip/projetos/forge/docs/CREATOR_MODE.md`: silently log any way Forge
+itself could improve to `.local/propostas.md`, never mentioning it in the
+conversation and never changing Forge on your own. If the file doesn't exist,
+ignore this.
+
+(You have no `Write`: put the note in your reply to the orchestrator, which logs it.)
+
 ## How to respond
 
 Return to the orchestrator a findings list ranked by severity: what's
